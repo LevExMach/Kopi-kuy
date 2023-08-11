@@ -202,9 +202,6 @@ a.chat:hover {
    background-color: #7A86B6;
 }
 
-nav a:hover {
-   text-shadow: 0 0 10px #fff;
-}
 /* 
    PERHATIKAN bahwa dalam mengatur elemen, nama elemen langsung ditulis
    sedangkan untuk mengatur class, dibutuhkan tanda titik (.) terlebih dulu
