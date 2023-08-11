@@ -1,0 +1,60 @@
+{
+    "nonkopi": [
+        {
+            "foto": "https://fibercreme.com/wp-content/uploads/2021/04/Bubble-Thai-Tea.jpg",
+            "nama": "Thai Tea",
+            "size": "250 Ml",
+            "harga": "13.000",
+            "link": "https://www.google.com/search?q=thai+tea&tbm=shop"
+        },
+        {
+            "foto": "https://fibercreme.com/wp-content/uploads/2022/02/es-bandung-tanpa-susu.jpg",
+            "nama": "Es Bandung",
+            "size": "250 Ml",
+            "harga": "15.000",
+            "link": "https://www.google.com/search?q=es+bandung&tbm=shop"
+        },
+        {
+            "foto": "https://sweetrip.id/wp-content/uploads/2022/12/es-doger-kopyor.jpg",
+            "nama": "Es Doger",
+            "size": "250 Ml",
+            "harga": "15.000",
+            "link": "https://www.google.com/search?q=es+doger&tbm=shop"
+        },
+        {
+            "foto": "https://img.kurio.network/U1i-Peaeq-v4d7BWOWW0o_9A_8k=/440x440/filters:quality(80)/https://kurio-img.kurioapps.com/21/07/04/9222c316-c84d-41b8-b523-25587f2de0fc.jpe",
+            "nama": "Es Lemon Tea",
+            "size": "125 Ml",
+            "harga": "10.000",
+            "link": "https://www.google.com/search?q=es+lemon+tea&tbm=shop"
+        },
+        {
+            "foto": "https://cdn0-production-images-kly.akamaized.net/mF_hcPUrspteuLRnEOt5t5tUwFw=/1x41:1000x604/1200x675/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4116045/original/096016200_1659931714-shutterstock_2137989959.jpg",
+            "nama": "Es Cendol",
+            "size": "120 Ml",
+            "harga": "15.000",
+            "link": "https://www.google.com/search?q=es+cendol&tbm=shop"
+        },
+        {
+            "foto": "https://fibercreme.com/wp-content/uploads/2021/05/Es-Teler-Alpukat-300x300.jpg",
+            "nama": "Es Teler Alpukat",
+            "size": "250 Ml",
+            "harga": "15.000",
+            "link": "https://www.google.com/search?q=es+teler+alpukat&tbm=shop"
+        },
+        {
+            "foto": "https://asset.kompas.com/crops/u8xYYCtGiP2WURmINF0Cggn9U2k=/137x112:937x645/750x500/data/photo/2020/03/04/5e5f688cb38f7.jpg",
+            "nama": "Air Mineral",
+            "size": "600 Ml",
+            "harga": "5.000",
+            "link": "https://www.google.com/search?q=air+mineral&tbm=shop"
+        },
+        {
+            "foto": "https://fibercreme.com/wp-content/uploads/2022/02/korean-strawberry-milk.jpg",
+            "nama": "Korean Strawberry Milk",
+            "size": "250 Ml",
+            "harga": "25.000",
+            "link": "https://www.google.com/search?q=korean+strawberry+milk&tbm=shop"
+        }
+    ]
+}
