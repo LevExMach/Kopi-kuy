@@ -1,5 +1,5 @@
 :root {
-   --bs-body-font-family: 'Poppins', sans-serif;
+   --bs-body-font-family: 'Poppins', sans-serif !important;
 }
 
 .bg {
@@ -9,9 +9,9 @@
 
 .bg-glass,
 .form-control:focus {
-   background: linear-gradient(to left, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
-   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.75);
-   backdrop-filter: blur(5px);
+   background: linear-gradient(to left, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)) !important;
+   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.75) !important;
+   backdrop-filter: blur(5px) !important; 
 }
 
 .border-bot {
@@ -42,10 +42,26 @@ option {
    transition: 0.5s;
 }
 
-.card-cus:hover {
+.list:hover .card-cus {
    opacity: 1;
    transform: translateY(0);
    transition: 0.5s;
+}
+
+.produk-cus {
+   opacity: 0;
+   width: 100%;
+   height: 0;
+   background: linear-gradient(to left, rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.700));
+   backdrop-filter: blur(25px);
+   bottom: 0;
+   transition: 0.5s;
+}
+
+.produk:hover .produk-cus {
+   opacity: 1;
+   height: 40%;
+   transition: 0.75s;
 }
 
 .trans {
@@ -59,4 +75,70 @@ option {
 
 .kopi {
    filter: invert();
+}
+
+.olshop img {
+   width: 4em;
+}
+
+.best-seller {
+   position: relative;
+   background-color: rgba(40, 44, 49, 1);
+}
+
+.best-seller::before,
+.best-seller::after {
+   position: absolute;
+   content: "";
+   width: 100%;
+   height: 76px;
+
+   /* background-image untuk menambahkan gambar sebagai background */
+   background-image: url(../images/background/garis-atas.png);
+
+   /*background-size agar gambar latar menyesuaikan tinggi / lebar elemen */
+   background-size: cover;
+
+   top: -60px;
+   left: 0;
+   color: rgba(40, 44, 49, 1);
+}
+
+.best-seller::after {
+   height: 60px;
+   background-image: url(../images/background/garis-bawah.png);
+   top: unset;
+   bottom: -60px;
+}
+
+.about-us {
+   max-width: 80%;
+}
+
+.about-us img {
+   width: 800px;
+}
+
+.our-team {
+   background-color: rgba(40, 44, 49, 1);
+}
+
+.radius {
+   border-radius: 50px 0px 50px 0px !important;
+}
+
+.review {
+   background-image: url(../images/background/bg-review.svg);
+   background-size: contain;
+   background-repeat: no-repeat;
+   padding-left: 40px;
+   padding-right: 40px;
+   justify-content: space-around;
+   text-align: center;
+}
+
+.testimoni img {
+   width: auto;
+   height: 60px;
+   object-fit: cover;
 }
