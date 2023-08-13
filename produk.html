@@ -109,6 +109,13 @@
                     </li>
 
                 </ul>
+                <a href="cart.html" class="btn btn-outline-light position-relative ms-2">
+                    <i class="bi bi-cart4"></i>
+                    <span id="cart_icon"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        0
+                    </span>
+                </a>
                 <a class="btn btn-outline-light ms-md-3" href="https://wa.me/6281290553535">
                     <i class="bi bi-whatsapp"></i> Chat</a>
             </div>
@@ -370,8 +377,19 @@
                                     Rp.${item.harga}
                                 </div>
                             </div>
-                            <a href="${item.link}" class="btn btn-outline-light w-100 mb-1">
-                                <i class="bi bi-cart4"></i> Beli</a>
+                            <button onclick='addToCart(${JSON.stringify(
+                        {
+                            nama: item.nama,
+                            harga: item.harga,
+                            foto: item.foto,
+                            hargaint:
+                                item.harga.split(".").join("") * 1,
+                            qty: 1,
+                        }
+                    )})' href="${item.link
+                        }" class="addToCart btn btn-outline-light w-100">
+                                <i class="bi bi-cart4"></i> Add To Cart
+                            </button>
                         </div>
                     </div>
                 </div>`;
@@ -413,8 +431,28 @@
             });
         });
 
+        var list_belanja = [];
+        function addToCart(item) {
+            //itemObj = JSON.parse(item)
+            list_belanja.push(item);
+            localStorage.setItem("list_belanja", JSON.stringify(list_belanja));
+            console.log("Berhasil Menambah Produk");
+            updateCartIcon();
+        }
+        function updateCartIcon() {
+            cart_icon.classList.add("d-none");
+            let list_belanja = localStorage.getItem("list_belanja");
+            if (list_belanja != null) {
+                list_belanja = JSON.parse(list_belanja);
+                cart_icon.textContent = list_belanja.length;
+                if (list_belanja.length > 0) cart_icon.classList.remove("d-none");
+            }
+        }
+        updateCartIcon();
+
         /* Batas Akhir penulisan kode Javascript */
     </script>
 </body>
 <script src="js/script.js"></script>
+
 </html>
