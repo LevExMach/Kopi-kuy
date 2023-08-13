@@ -399,11 +399,11 @@
       if (tmp_list_belanja.length < 1) {
         ul_list_produk.innerHTML = `<li class="list-group-item d-flex justify-content-center align-items-center"><h3>Keranjang Belanja Anda Kosong</h3></li>`;
         keteranganharga.classList.add("d-none");
-      } else {
-        keteranganharga.classList.remove("d-none");
-        var template_list = ``;
-        tmp_list_belanja.forEach((item, index) => {
-          template_list += `<li class="list-group-item d-flex justify-content-between align-items-center">
+        } else {
+          keteranganharga.classList.remove("d-none");
+          var template_list = ``;
+          tmp_list_belanja.forEach((item, index) => {
+            template_list += `<li class="list-group-item d-flex justify-content-between align-items-center bg-glass text-light py-2 px-3 rounded-2 border-cus">
                             <img src="${item.foto}" height="40" width="40">
                             <div class="ms-2 me-auto">
                                 <div class="fw-bold">${item.nama}</div>
@@ -411,67 +411,63 @@
                                 <span class="jumlah">${item.qty}</span>
                             </div>
                             <div class="fw-bold mx-3">${titikPemisahRupiah(
-            item.hargaint * item.qty
-          )}</div>
-                            <button onclick="hapusProduk(${index})" class="btn btn-danger btn-sm">Hapus</span>
+                              item.hargaint * item.qty
+                            )}</div>
+                            <button onclick="hapusProduk(${index})" class="btn btn-outline-light btn-sm">Hapus</span>
                         </li>`;
-        });
-        ul_list_produk.innerHTML = template_list;
-        subtotal_html.innerHTML = titikPemisahRupiah(hargatotal);
-        ppn_html.innerHTML = titikPemisahRupiah((hargatotal * 10) / 100);
-        total_html.innerHTML = titikPemisahRupiah(
-          hargatotal + (hargatotal * 10) / 100
-        );
-      }
-    }
-
-    /* Fungsi Untuk memberi titik ribuan pada rupiah untuk memudahkan pembacaan harga */
-    function titikPemisahRupiah(x) {
-      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    }
-
-    /* Fungsi untuk menghapus quantity dan produk pada cart */
-
-    function hapusProduk(index) {
-      hargatotal = hargatotal - tmp_list_belanja[index].hargaint;
-
-      var list_belanja = localStorage.getItem("list_belanja");
-      var list_belanja_object = JSON.parse(
-        localStorage.getItem("list_belanja")
-      );
-      var nama_produk = tmp_list_belanja[index].nama;
-
-      var idx = list_belanja_object.findIndex((itemTMP) => {
-        if (itemTMP.nama === nama_produk) {
-          return true;
+          });
+          ul_list_produk.innerHTML = template_list;
+          subtotal_html.innerHTML = titikPemisahRupiah(hargatotal);
+          ppn_html.innerHTML = titikPemisahRupiah((hargatotal * 10) / 100);
+          total_html.innerHTML = titikPemisahRupiah(
+            hargatotal + (hargatotal * 10) / 100
+          );
         }
-        return false;
-      });
+      }
 
-      if (idx !== -1) {
-        list_belanja_object.splice(idx, 1);
-        localStorage.setItem(
-          "list_belanja",
-          JSON.stringify(list_belanja_object)
+      /* Fungsi Untuk memberi titik ribuan pada rupiah untuk memudahkan pembacaan harga */
+      function titikPemisahRupiah(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      }
+
+      /* Fungsi untuk menghapus quantity dan produk pada cart */
+
+      function hapusProduk(index) {
+        hargatotal = hargatotal - tmp_list_belanja[index].hargaint;
+
+        var list_belanja = localStorage.getItem("list_belanja");
+        var list_belanja_object = JSON.parse(
+          localStorage.getItem("list_belanja")
         );
-      }
-      if (tmp_list_belanja[index].qty > 1) {
-        tmp_list_belanja[index].qty = tmp_list_belanja[index].qty - 1;
-      } else {
-        tmp_list_belanja.splice(index, 1);
-      }
-      updateTampilan();
-    }
-  </script>
-  <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        var nama_produk = tmp_list_belanja[index].nama;
 
-  <script type="text/javascript">
-    var myLink = document.querySelector('a[href="#"]');
-    myLink.addEventListener("click", function (e) {
-      e.preventDefault();
-    });
-  </script>
+        var idx = list_belanja_object.findIndex((itemTMP) => {
+          if (itemTMP.nama === nama_produk) {
+            return true;
+          }
+          return false;
+        });
+
+        if (idx !== -1) {
+          list_belanja_object.splice(idx, 1);
+          localStorage.setItem(
+            "list_belanja",
+            JSON.stringify(list_belanja_object)
+          );
+        }
+        if (tmp_list_belanja[index].qty > 1) {
+          tmp_list_belanja[index].qty = tmp_list_belanja[index].qty - 1;
+        } else {
+          tmp_list_belanja.splice(index, 1);
+        }
+        updateTampilan();
+      }
+
+      var myLink = document.querySelector('a[href="#"]');
+      myLink.addEventListener("click", function (e) {
+        e.preventDefault();
+      });
+    </script>
   <script src="js/script.js"></script>
 </body>
 
