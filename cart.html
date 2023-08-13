@@ -4,309 +4,373 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keranjang Belanja</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css"
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Yellowtail&display=swap"
-        rel="stylesheet">
-    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.6.3.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css" />
+    <style>
+      .card {
+        border: none;
+      }
+      .card-header {
+        padding: 0.5rem 1rem;
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, 0.03);
+        border-bottom: none;
+      }
+      .btn-light:focus {
+        color: #212529;
+        background-color: #e2e6ea;
+        border-color: #dae0e5;
+        box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+      }
+      .form-control {
+        height: 50px;
+        border: 2px solid #eee;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+      .form-control:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #039be5;
+        outline: 0;
+        box-shadow: none;
+      }
+      .bg-nav {
+        background-color: #73483f;
+      }
+      .bg-cok {
+        background-color: #f4ede5;
+      }
+      div.nomorakun {
+        /* color mengatur warna tulisan */
+        text-align: left;
+        margin-top: 4px;
+        margin-left: 50px;
+        margin-bottom: 21px;
+      }
+      .oder {
+        font-size: 12px;
+      }
+    </style>
   </head>
 
-  <body class="bg-dark bg">
+  <body class="bg-cok">
     <!--  -->
-    <nav class="navbar navbar-dark bg-glass navbar-expand-lg bisadicopy border-bot sticky-top mw-100 load">
+    <nav class="navbar navbar-dark bg-nav navbar-expand-lg bisadicopy">
       <div class="container">
-          <a class="navbar-brand" href="index.html">
-              <img src="images/logo/logo_kuy.png" height="40" alt="image">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo/logo_kuy.png" height="40" alt="image" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav11"
+          aria-controls="navbarNav11"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav11">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html#best-seller">Best Seller</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#our-team">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#review">Review</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact-us">Contact US</a>
+            </li>
+          </ul>
+          <a href="produk.html" class="btn btn-outline-light position-relative">
+            Shop
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav11"
-              aria-controls="navbarNav11" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav11">
-              <ul class="navbar-nav ms-auto">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="index.html#best-seller">Best Seller</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html#our-team">Our Team</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html#review">Review</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html#contact-us">Contact Us</a>
-                  </li>
 
-              </ul>
-              <a class="btn btn-outline-light ms-md-3" href="produk.html">Shop</a>
-              <a class="btn btn-outline-light ms-md-3" href="https://wa.me/6281290553535">
-                  <i class="bi bi-whatsapp"></i> Chat</a>
-          </div>
-      </div>
-  </nav>
-
-  <section class="keranjang">
-    <div class="container my-4">
-      <h1 class="text-center mb-3">Keranjang Belanja</h1>
-      <!-- tampilan -->
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <ul class="list-group mb-1" id="ul_list_produk"></ul>
+          <a
+            class="btn btn-outline-light ms-md-3"
+            href="https://wa.me/6281277778888?text=Halo saya mau beli kopi">
+            <i class="bi bi-whatsapp"></i> Chat
+          </a>
         </div>
       </div>
-      <!-- orderan -->
-      <div class="row justify-content-center">
-        <div id="keteranganharga" class="">
-          <div class="container d-flex justify-content-center mt-5 mb-5">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <h4>Metode Pembayaran</h4>
-                <div class="card">
-                  <div
-                    class="d-flex align-items-center justify-content-between mx-5 my-3">
-                    <span class="oder">Id Order:</span>
-                    <span class="oder">518d-abjk-fd79-67bj-fyvjh6</span>
-                  </div>
-                  <div class="nomorakun">
-                    <h4>Nomor Akun</h4>
-                    <h7>081277788888</h7>
-                  </div>
-                  <h6 class="mx-3">Bagaimana Cara Membayar?</h6>
-                  <div class="accordion" id="accordionExample">
-                    <div class="card">
-                      <!-- Dana -->
-                      <div class="card-header p-0" id="headingTwo">
+    </nav>
+
+    <section class="keranjang">
+      <div class="container my-4">
+        <h1 class="text-center mb-3">Keranjang Belanja</h1>
+        <!-- tampilan -->
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <ul class="list-group mb-1" id="ul_list_produk"></ul>
+          </div>
+        </div>
+        <!-- orderan -->
+        <div class="row justify-content-center">
+          <div id="keteranganharga" class="">
+            <div class="container d-flex justify-content-center mt-5 mb-5">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <h4>Metode Pembayaran</h4>
+                  <div class="card">
+                    <div
+                      class="d-flex align-items-center justify-content-between mx-5 my-3">
+                      <span class="oder">Id Order:</span>
+                      <span class="oder">518d-abjk-fd79-67bj-fyvjh6</span>
+                    </div>
+                    <div class="nomorakun">
+                      <h4>Nomor Akun</h4>
+                      <h7>081277788888</h7>
+                    </div>
+                    <h6 class="mx-3">Bagaimana Cara Membayar?</h6>
+                    <div class="accordion" id="accordionExample">
+                      <div class="card">
+                        <!-- Dana -->
+                        <div class="card-header p-0" id="headingTwo">
+                          <h2 class="mb-0">
+                            <button
+                              class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#collapseTwo"
+                              aria-expanded="false"
+                              aria-controls="collapseTwo">
+                              <div
+                                class="d-flex align-items-center justify-content-between">
+                                <span>Dana</span>
+                                <img
+                                  src="data:image/png;base64,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"
+                                  width="30" />
+                              </div>
+                            </button>
+                          </h2>
+                        </div>
+                        <div
+                          id="collapseTwo"
+                          class="collapse"
+                          aria-labelledby="headingTwo"
+                          data-parent="#accordionExample">
+                          <div class="card-body">
+                            <ol class="list-group list-group-numbered">
+                              <li class="list-group-item">
+                                Buka aplikasi DANA
+                              </li>
+                              <li class="list-group-item">Tap 'Kirim'</li>
+                              <li class="list-group-item">
+                                Tap 'Kirim ke Teman'
+                              </li>
+                              <li class="list-group-item">
+                                Masukkan nomor tujuan (081277788888)
+                              </li>
+                              <li class="list-group-item">
+                                Masukkan nominal yang akan dikirimkan (pastikan
+                                sama dengan orderan)
+                              </li>
+                              <li class="list-group-item">
+                                Pilih metode pembayaran menggunakan saldo DANA
+                              </li>
+                              <li class="list-group-item">
+                                Pastikan nomor dan jumlah transfer sudah sesuai
+                              </li>
+                              <li class="list-group-item">Tap 'Bayar'</li>
+                              <li class="list-group-item">Masukkan PIN DANA</li>
+                              <li class="list-group-item">
+                                Transakti berhasil
+                              </li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- gopay -->
+                      <div class="card-header p-0" id="gopay">
                         <h2 class="mb-0">
                           <button
                             class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom"
                             type="button"
                             data-toggle="collapse"
-                            data-target="#collapseTwo"
+                            data-target="#collapsegopay"
                             aria-expanded="false"
                             aria-controls="collapseTwo">
                             <div
                               class="d-flex align-items-center justify-content-between">
-                              <span>Dana</span>
+                              <span>Gopay</span>
                               <img
-                                src="data:image/png;base64,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"
+                                src="data:image/png;base64,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"
                                 width="30" />
                             </div>
                           </button>
                         </h2>
                       </div>
                       <div
-                        id="collapseTwo"
+                        id="collapsegopay"
                         class="collapse"
-                        aria-labelledby="headingTwo"
+                        aria-labelledby="gopay"
                         data-parent="#accordionExample">
                         <div class="card-body">
                           <ol class="list-group list-group-numbered">
+                            <li class="list-group-item">Buka aplikasi Gojek</li>
                             <li class="list-group-item">
-                              Buka aplikasi DANA
-                            </li>
-                            <li class="list-group-item">Tap 'Kirim'</li>
-                            <li class="list-group-item">
-                              Tap 'Kirim ke Teman'
+                              Pada halaman utama, klik menu "Bayar"
                             </li>
                             <li class="list-group-item">
                               Masukkan nomor tujuan (081277788888)
                             </li>
                             <li class="list-group-item">
-                              Masukkan nominal yang akan dikirimkan (pastikan
-                              sama dengan orderan)
+                              Isi nominal saldo (pastikan sama dengan orderan).
+                            </li>
+                            <li class="list-group-item">Klik "Konfirmasi".</li>
+                            <li class="list-group-item">
+                              Pilih jenis pembayaran melalui ikon yang tersedia.
+                              Anda juga dapat menambahkan catatan bila
+                              diinginkan.
                             </li>
                             <li class="list-group-item">
-                              Pilih metode pembayaran menggunakan saldo DANA
+                              Pilih mode "Teman" jika ingin transaksi dapat
+                              dilihat oleh teman GoPay Anda dan teman GoPay
+                              penerima.
                             </li>
                             <li class="list-group-item">
-                              Pastikan nomor dan jumlah transfer sudah sesuai
+                              Klik "Konfirmasi & Bayar".
                             </li>
-                            <li class="list-group-item">Tap 'Bayar'</li>
-                            <li class="list-group-item">Masukkan PIN DANA</li>
+                            <li class="list-group-item">Masukkan PIN GoPay.</li>
                             <li class="list-group-item">
-                              Transakti berhasil
+                              Tunggu sampai muncul notifikasi bahwa transfer
+                              saldo telah berhasil.
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+                      <!-- ovo -->
+                      <div class="card-header p-0" id="ovo">
+                        <h2 class="mb-0">
+                          <button
+                            class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseovo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            <div
+                              class="d-flex align-items-center justify-content-between">
+                              <span>OVO</span>
+                              <img
+                                src="data:image/jpeg;base64,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"
+                                width="30" />
+                            </div>
+                          </button>
+                        </h2>
+                      </div>
+                      <div
+                        id="collapseovo"
+                        class="collapse"
+                        aria-labelledby="ovo"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                          <ol class="list-group list-group-numbered">
+                            <li class="list-group-item">Buka aplikasi OVO.</li>
+                            <li class="list-group-item">
+                              Masukkan security code.
+                            </li>
+                            <li class="list-group-item">
+                              Pilih menu 'Transfer', kemudian pilih 'Ke sesama
+                              OVO'.
+                            </li>
+                            <li class="list-group-item">
+                              Masukkan nomor 081277778888.
+                            </li>
+                            <li class="list-group-item">
+                              Masukkan nominal saldo (pastikan sama dengan
+                              orderan).
+                            </li>
+                            <li class="list-group-item">Klik 'Lanjutkan'.</li>
+                            <li class="list-group-item">
+                              Di layar akan terlihat detail transaksi, periksa
+                              detail tersebut mulai dari nomor tujuan dan jumlah
+                              yang akan ditransfer.
+                            </li>
+                            <li class="list-group-item">
+                              Setelah itu, klik 'Transfer'.
+                            </li>
+                            <li class="list-group-item">
+                              Tunggu hingga proses transfer berhasil dilakukan.
+                            </li>
+                            <li class="list-group-item">
+                              Transfer dari OVO ke OVO telah selesai dilakukan.
                             </li>
                           </ol>
                         </div>
                       </div>
                     </div>
-                    <!-- gopay -->
-                    <div class="card-header p-0" id="gopay">
-                      <h2 class="mb-0">
-                        <button
-                          class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapsegopay"
-                          aria-expanded="false"
-                          aria-controls="collapseTwo">
-                          <div
-                            class="d-flex align-items-center justify-content-between">
-                            <span>Gopay</span>
-                            <img
-                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEUArtb///+66PMArNbK7fYAqdQArNX4/f7s9/txxuKa2Ouy5fIAp9M/t9rz/P37/v/j9frT8ffD6/QAstjA5/Oe3e43tNi34O/Q7vfc8/kJttqm3u4lu91fyON+1OlJutxewN+CzeU7stiR2exMwuBvzeWT2uxnw+De7/ao3+5Ov9+Q0uih1uqv3e59yuRTutze7SWuAAAIEklEQVR4nO2df1uyPBSAN3EDFBBRCdRS0B7LH/X9v90LmmW9UJ6xw5zX7j96nroquBuw7XDORuiZIBx2sYiiqPOT4mtoxxuGwacXOf0zCCfrKcHCslgVloV2xOl8ldqXhs5szgvQDtg6hcx0En4Zps/kjuzO8Mfu2XD4eI+CheI6ORk6d9mCJfwxLA0Hs3sVLBRXdmEYzu9WsHimpoXh5I4FifU0IMH6ng35PCAhXkd/A/BRSoaqTwKZiHRVnwIuVscY6o4x1B9jqD/GUH+Mof4YQ/0xhvpjDPXHGOqPMdQfY6g/xlB/jKH+GEP9MYb6Ywz1xxjqjzHUH2PYDM6tku9Js1a7aawohoUYY5x5xYc8jn3fX5wp/h/HMTk7t+Eqz5CXablWmWic54vlc7ZbTfqdJAxK7IJB+aH8xAnTqD/5t8vc5XueH3+szE7GkpVkyHnRIMR/37jZpD9OwgG9CicZ9yeZu9n6pPgFOEnfUgyLsyPL3f7QTZ3Avs7tgkHgpNHDbLcceUyC0U8kGHKPbA5XN1u9aJjsfIR2bG7IvOeu01TvhP2yI9Kbsakh9/wXOXonur4nS+2DhoaM92T6FTgbya3YyJCzxViuX4H9JrcVGxmyZSJdsFDcSFVsYugtUwTB4kJ9l6nYwJAtQhRBSpNY4r0obshinBYsGOyZvDGcsCHn8h8yn4RLeY0obMj2kruJb4zlDcRFDZnrIApSx5XWiIKG3O9iClL6KktQ1NDawecQINKFrMtUzJD7aM/RM2+yZhlihqyHLUhfZd2IQoY8x+rrvwhjSY0oZOg9oQtSupV0I4oZYgy4fyKrvxAxZNNfTixw5GA/KzT0VrV+dnfnSsJXd5Vy9lIreIgrV4cQQWF/yEe1I9JufHslxQKG3rrOMNhhBDwbImKY1TWhs7m9JhQw5Oyh3vA+2pDVTn3t3g2u/yLQhqR+4pRuvZtTFDCc/jKvSFwurbs40nxwCjdk699m985435PDrNfbuVvCmr6QEjDc/B6/sCUxsO3ACZPxW8OXbgKGWfCroWzs4MH3GoSIBQxXyAGMCqKt+CBOwPDQumDBJBftiASepYiR4F9IloKKYENO2pj+VuBkYuvXwQ1jRYbliElEEWzI8AOJ9YrtGC6UGVI7E3ikwg23+JHEekWByQvcEPeVzB+EObgR4YYtD2l+0AePbqCGnO1VClK6hSrCDZUMab5IoA8brpshheailIbX9jLHPx5XbTgGNmJxlUZXP4HLX23VxqFawtnCegwOMSy/n6s2tIFBWQY1JKoNaRd2lbI+6YAMR2omTxekPqgRNTQExp01NKSwnDCwYRypFqQH0CQKamjFyKlCV/AAetRoaQhKegMbYqd7XQEsrQ9uqCpMc1eGQXLY78e1sYTxSHfDoesf64xea4Lr2Ibo9+EwZ8dqNsZ31QkDyIboz9Lgs2rGsmZ3afj0NcNl1dFnXEP0MU14mQtVPd3GNkQel44v44XVgT3cHh995N0n3wyrgrO4/SEnGrYhcI6PbBhepLDz6vsQPPK+sThNdvEsXQwrDWGzpw6JID+Ab2gv2OexqiOXB1AbWv3r46WnH0CPl4ZnAZ5Vf8MBNMcHR/XxDen09CfnvHpIAzS8waj+YHQ2nFR/AyxOAzfEf/f0hyEwJAx/94Rd8UTtj0FZnSGwru0W3wFP2Ydh9X0ILL+EGy7R3+OfZxd5ZW9I0wWy4RY9F8OOS0VeV9YBjOrfZD7NyzIvWrCubiWBlTzADdvIiXI6s9fawySwGmF41tdIdThxDHt/CM9NtBS/mhnMsA1VpypA3wELGPbazxG+JHhDN1SbFEWdR3RDV61hCMzFEDDcqkzdo3Q4gmWZChjOFaZfFoCCLkKGyhK9PxDIiZJXu9YK/4B5bSKGSnOGBo/4hr+UcrdhCJtZiBk+Yq6986chtLBEpJY7VmmYQms4herxVXYXK+ws6BKlN+K6DUM2VycY4FcjlLSytkk1HfRqhCPsWZkhcGIhasiZqtqnNmpmjjBXkWGvhbqnE7masanzDq/PE12RbqOkT5wJFMqKripooS6bWEO4FCixFDVUMksUacIGa1/6rV+nYgu3iq/Q6rUdr3FcoZUVGqyy6z22G3Tria2r0Gil5FYLZsdWSysOfFPctDe26YquR99wxfJtW0/UrvDy0M1Wnecsfm2lXxzDx6NyDEvHPxbkkYHdE1sSQ4phcTN6yC+jBs3W15KxR4kXT1K0jsNOd6TRIvRSdmFhLM7GQ4SrNUjH2chrtt6XpJ10mMf9t/2hEyWhyFYzPxgEjpN2x4d9tiCN956RuBsSY3zkL5YbN+vN+p1uEsJNS6/+ay9zy+2D4nIrrObnJXdHq3KPrtP2TXkeL5ZL963c9unk6wQVOGGaRP3Xyb/VLnM3y3c/zz/2f+KytvbC2bOLHHe3Ou7MxT3mseJs4yP+JeUX8ph/rtLHWbmIkOy9rVraWa5skZ9bsB0/L9sK99Bm7zz9MYb6Ywz1xxjqjzHUH2OoP8ZQf4yh/hhD/TGG+mMM9ccY6o8x1B9jqD/GUH+Mof4YQ/0xhvpjDPWnMByqPgdkIhJOb27vUInw0ZAE63s2JHOH0FXz7UxvF/48IDScqj4NPPgopYTak/u9TPkqKAxp+Hivinyd0tKQJnf6sOHbcm3u0pAm99iKnK+jwdmQhr2prKTc24AXD5mnU9HSyZDa6dN8RCwUyjTZyl23PxNrpUNG8+dziQT5ypBPow4e/f+DeLRo6HyWK/0HltujKeJm9r0AAAAASUVORK5CYII="
-                              width="30" />
-                          </div>
-                        </button>
-                      </h2>
-                    </div>
-                    <div
-                      id="collapsegopay"
-                      class="collapse"
-                      aria-labelledby="gopay"
-                      data-parent="#accordionExample">
-                      <div class="card-body">
-                        <ol class="list-group list-group-numbered">
-                          <li class="list-group-item">Buka aplikasi Gojek</li>
-                          <li class="list-group-item">
-                            Pada halaman utama, klik menu "Bayar"
-                          </li>
-                          <li class="list-group-item">
-                            Masukkan nomor tujuan (081277788888)
-                          </li>
-                          <li class="list-group-item">
-                            Isi nominal saldo (pastikan sama dengan orderan).
-                          </li>
-                          <li class="list-group-item">Klik "Konfirmasi".</li>
-                          <li class="list-group-item">
-                            Pilih jenis pembayaran melalui ikon yang tersedia.
-                            Anda juga dapat menambahkan catatan bila
-                            diinginkan.
-                          </li>
-                          <li class="list-group-item">
-                            Pilih mode "Teman" jika ingin transaksi dapat
-                            dilihat oleh teman GoPay Anda dan teman GoPay
-                            penerima.
-                          </li>
-                          <li class="list-group-item">
-                            Klik "Konfirmasi & Bayar".
-                          </li>
-                          <li class="list-group-item">Masukkan PIN GoPay.</li>
-                          <li class="list-group-item">
-                            Tunggu sampai muncul notifikasi bahwa transfer
-                            saldo telah berhasil.
-                          </li>
-                        </ol>
-                      </div>
-                    </div>
-                    <!-- ovo -->
-                    <div class="card-header p-0" id="ovo">
-                      <h2 class="mb-0">
-                        <button
-                          class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseovo"
-                          aria-expanded="false"
-                          aria-controls="collapseTwo">
-                          <div
-                            class="d-flex align-items-center justify-content-between">
-                            <span>OVO</span>
-                            <img
-                              src="data:image/jpeg;base64,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"
-                              width="30" />
-                          </div>
-                        </button>
-                      </h2>
-                    </div>
-                    <div
-                      id="collapseovo"
-                      class="collapse"
-                      aria-labelledby="ovo"
-                      data-parent="#accordionExample">
-                      <div class="card-body">
-                        <ol class="list-group list-group-numbered">
-                          <li class="list-group-item">Buka aplikasi OVO.</li>
-                          <li class="list-group-item">
-                            Masukkan security code.
-                          </li>
-                          <li class="list-group-item">
-                            Pilih menu 'Transfer', kemudian pilih 'Ke sesama
-                            OVO'.
-                          </li>
-                          <li class="list-group-item">
-                            Masukkan nomor 081277778888.
-                          </li>
-                          <li class="list-group-item">
-                            Masukkan nominal saldo (pastikan sama dengan
-                            orderan).
-                          </li>
-                          <li class="list-group-item">Klik 'Lanjutkan'.</li>
-                          <li class="list-group-item">
-                            Di layar akan terlihat detail transaksi, periksa
-                            detail tersebut mulai dari nomor tujuan dan jumlah
-                            yang akan ditransfer.
-                          </li>
-                          <li class="list-group-item">
-                            Setelah itu, klik 'Transfer'.
-                          </li>
-                          <li class="list-group-item">
-                            Tunggu hingga proses transfer berhasil dilakukan.
-                          </li>
-                          <li class="list-group-item">
-                            Transfer dari OVO ke OVO telah selesai dilakukan.
-                          </li>
-                        </ol>
-                      </div>
-                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <h4>Ringkasan Order</h4>
-                <div class="card">
-                  <!-- bas -->
-                  <!-- <div class="d-flex align-items-center m-3">
-                  <div>
-                    <img
-                      class="pic"
-                      src="https://images.pexels.com/photos/7322083/pexels-photo-7322083.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                      alt="" />
-                  </div>
-                  <div class="ps-3 d-flex flex-column justify-content">
-                    <h3 class="fw-bold">Testing</h3>
-                  </div>
-                </div> -->
-
-                  <hr class="mt-0 line" />
-                  <!-- bas -->
-                  <div class="p-3">
-                    <div class="d-flex justify-content-between mb-2">
-                      <span>SubTotal</span>
-                      <span id="subtotal_html">-$2.00</span>
+                <div class="col-md-6">
+                  <h4>Ringkasan Order</h4>
+                  <div class="card">
+                    <!-- bas -->
+                    <!-- <div class="d-flex align-items-center m-3">
+                    <div>
+                      <img
+                        class="pic"
+                        src="https://images.pexels.com/photos/7322083/pexels-photo-7322083.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                        alt="" />
                     </div>
-                  </div>
-                  <hr class="mt-0 line" />
-                  <div class="p-3">
-                    <div class="d-flex justify-content-between mb-2">
-                      <span>PPN (10%)</span>
-                      <span id="ppn_html">-$2.00</span>
+                    <div class="ps-3 d-flex flex-column justify-content">
+                      <h3 class="fw-bold">Testing</h3>
                     </div>
-                  </div>
+                  </div> -->
 
-                  <hr class="mt-0 line" />
-
-                  <div class="p-3">
-                    <div class="d-flex justify-content-between mb-2">
-                      <span>Total</span>
-                      <span id="total_html">-$2.00</span>
+                    <hr class="mt-0 line" />
+                    <!-- bas -->
+                    <div class="p-3">
+                      <div class="d-flex justify-content-between mb-2">
+                        <span>SubTotal</span>
+                        <span id="subtotal_html">-$2.00</span>
+                      </div>
                     </div>
-                  </div>
+                    <hr class="mt-0 line" />
+                    <div class="p-3">
+                      <div class="d-flex justify-content-between mb-2">
+                        <span>PPN (10%)</span>
+                        <span id="ppn_html">-$2.00</span>
+                      </div>
+                    </div>
 
-                  <div class="p-3">
-                    <a
-                      target="_blank"
-                      class="btn btn-danger col-12"
-                      href="https://wa.me/6281277778888?text=halo kopi kuy saya mau pesan">
-                      Kirim Bukti Pembayaran
-                    </a>
+                    <hr class="mt-0 line" />
+
+                    <div class="p-3">
+                      <div class="d-flex justify-content-between mb-2">
+                        <span>Total</span>
+                        <span id="total_html">-$2.00</span>
+                      </div>
+                    </div>
+
+                    <div class="p-3">
+                      <a
+                        target="_blank"
+                        class="btn btn-danger col-12"
+                        href="https://wa.me/6281277778888?text=halo kopi kuy saya mau pesan">
+                        Kirim Bukti Pembayaran
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -314,8 +378,7 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
     <script>
       var tmp_list_belanja = [];
@@ -352,99 +415,13 @@
 
       function updateTampilan() {
         if (tmp_list_belanja.length < 1) {
-          ul_list_produk.innerHTML = `<div class="row px-3 mt-4 d-flex justify-content-center align-items-center bg-glass text-center border-cus rounded-4 found">
-                <svg style="width: 30%" class="found col-12 my-5 h-auto pt-5" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="982.48732"
-                    height="763.01413" viewBox="0 0 982.48732 763.01413" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <circle cx="559.4329" cy="333.06116" r="40.02979" fill="#e6e6e6" />
-                    <path
-                        d="M766.295,452.99465l-41.832-41.832a44.307,44.307,0,0,0-14.42627-61.92578,44.45758,44.45758,0,0,0-58.91358,12.23779,44.30652,44.30652,0,0,0,60.03321,62.99512l41.832,41.832A9.40939,9.40939,0,0,0,766.295,452.99465ZM709.59431,409.6011a31.68421,31.68421,0,1,1,9.27978-22.40381A31.58568,31.58568,0,0,1,709.59431,409.6011Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#3f3d56" />
-                    <path
-                        d="M1069.529,514.69884C1176.50914,633.00725,866.39184,803.50707,615.8095,803.50707S191.86334,671.39983,162.09,514.69884C89.89987,134.75174,777.16735-106.74054,615.8095,225.89055,380.61181,710.73882,985.27984,421.5284,1069.529,514.69884Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#e6e6e6" />
-                    <path
-                        d="M1021.529,542.69884C1128.50914,661.00725,818.39184,831.50707,567.8095,831.50707S143.86334,699.39983,114.09,542.69884C41.89987,162.75174,729.16735-78.74054,567.8095,253.89055,332.61181,738.73882,937.27984,449.5284,1021.529,542.69884Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#3f3d56" />
-                    <path
-                        d="M258.35026,265.31823c-75.06741-3.30525-133.27133-19.49788-132.50668-36.86436.45844-10.41178,21.70324-18.7842,58.28677-22.96955a1,1,0,1,1,.22727,1.987c-34.46168,3.943-56.11733,12.01678-56.516,21.07051-.69148,15.70451,59.11433,31.63093,130.59659,34.77832s132.4564-7.461,133.14787-23.16554c.40032-9.09178-20.59681-19.06558-54.79775-26.0284a1.00008,1.00008,0,1,1,.3991-1.95993c36.3011,7.39058,56.85694,17.624,56.39672,28.0763C392.81953,257.60908,333.41767,268.62348,258.35026,265.31823Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#198754" />
-                    <path
-                        d="M191.67927,268.22672a76.98277,76.98277,0,0,0,133.03578,5.52178A1211.97551,1211.97551,0,0,1,191.67927,268.22672Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#198754" />
-                    <path
-                        d="M333.019,252.71347a76.997,76.997,0,1,0-147.74945-5.70562A572.23325,572.23325,0,0,0,333.019,252.71347Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#198754" />
-                    <circle cx="168.83353" cy="123.60073" r="9" fill="#fff" />
-                    <circle cx="122.51347" cy="152.59128" r="15" fill="#fff" />
-                    <circle cx="348.90479" cy="142.89813" r="9.99975" fill="#198754" />
-                    <circle cx="122.90479" cy="452.89813" r="6.00007" fill="#e6e6e6" />
-                    <circle cx="542.90479" cy="658.89813" r="6.00007" fill="#e6e6e6" />
-                    <circle cx="151.90479" cy="339.89813" r="3.00007" fill="#e6e6e6" />
-                    <circle cx="399.90479" cy="563.89813" r="3.00007" fill="#e6e6e6" />
-                    <circle cx="850.90479" cy="534.89813" r="3.00007" fill="#e6e6e6" />
-                    <circle cx="709.90479" cy="623.89813" r="3.00007" fill="#e6e6e6" />
-                    <circle cx="562.90479" cy="515.89813" r="3.00007" fill="#e6e6e6" />
-                    <circle cx="372.90479" cy="219.89813" r="3.00007" fill="#e6e6e6" />
-                    <circle cx="396.90479" cy="71.89813" r="3.00007" fill="#e6e6e6" />
-                    <circle cx="382.90479" cy="694.89813" r="3.00007" fill="#e6e6e6" />
-                    <circle cx="234.90479" cy="631.89813" r="3.00007" fill="#e6e6e6" />
-                    <circle cx="703.90479" cy="523.89813" r="3.00007" fill="#e6e6e6" />
-                    <circle cx="148.3737" cy="224.7987" r="9" fill="#fff" />
-                    <path
-                        d="M460.6612,431.39114c0,26.88035-41.55939,89.516-53.70465,107.24669a3.99188,3.99188,0,0,1-6.5907,0c-12.14526-17.73066-53.70465-80.36634-53.70465-107.24669a57,57,0,1,1,114,0Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#fff" />
-                    <circle cx="294.90486" cy="358.8982" r="29" fill="#198754" />
-                    <ellipse cx="294.40486" cy="496.3982" rx="33.5" ry="6.5" fill="#fff" />
-                    <path
-                        d="M925.60957,386.41245a10.52681,10.52681,0,0,0-.64106,1.52851l-47.783,13.27682-8.61085-8.42662L854.1589,404.12429,867.953,420.52338a8,8,0,0,0,9.35283,2.169l51.61632-22.78484a10.49709,10.49709,0,1,0-3.31256-13.49509Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#ffb8b8" />
-                    <path
-                        d="M875.50191,401.996l-17.9352,13.95958a4.5,4.5,0,0,1-6.68163-1.33719L839.73843,394.891a12.49741,12.49741,0,0,1,19.76923-15.29426l16.33819,15.59379a4.5,4.5,0,0,1-.34394,6.80543Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#198754" />
-                    <path
-                        d="M930.19158,379.80967l18.18807,8.1829a3.14913,3.14913,0,0,1,1.57976,4.16384l-2.15339,4.78633a1.05293,1.05293,0,0,1,.52659,1.38795l-.86136,1.91453a1.05292,1.05292,0,0,1-1.388.52659l-.86136,1.91453a1.05292,1.05292,0,0,1,.52659,1.388l-.86136,1.91453a1.0529,1.0529,0,0,1-1.38794.52659L931.8709,432.36162a3.14914,3.14914,0,0,1-4.16384,1.57977l-18.18807-8.1829a3.14915,3.14915,0,0,1-1.57977-4.16384l18.08852-40.20522A3.14913,3.14913,0,0,1,930.19158,379.80967Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#3f3d56" />
-                    <path
-                        d="M912.82137,423.21181l14.59056,6.57106a3.03424,3.03424,0,0,0,3.99937-1.51155l6.73892-14.98951,2.34078-5.196,6.09875-13.562a3.026,3.026,0,0,0-1.51149-3.98886l-4.58726-2.06786L930.47694,383.964a3.02112,3.02112,0,0,0-3.98861,1.522L920.589,398.59669l-6.7179,14.92653-2.56118,5.69979A3.022,3.022,0,0,0,912.82137,423.21181Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#f2f2f2" />
-                    <polygon points="773.577 540.443 785.837 540.442 791.67 493.154 773.575 493.155 773.577 540.443"
-                        fill="#ffb8b8" />
-                    <path
-                        d="M879.2066,604.93325l24.1438-.001h.001a15.38605,15.38605,0,0,1,15.38648,15.38623v.5l-39.53052.00146Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#2f2e41" />
-                    <polygon points="805.577 537.443 817.837 537.442 823.67 490.154 805.575 490.155 805.577 537.443"
-                        fill="#ffb8b8" />
-                    <path
-                        d="M911.2066,601.93325l24.1438-.001h.001a15.38605,15.38605,0,0,1,15.38648,15.38623v.5l-39.53052.00146Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#2f2e41" />
-                    <path
-                        d="M827.34138,497.97109a39.41035,39.41035,0,0,0,36.8999,26.81006l.62012.01c6.32959.18,13.75976-1.86,21.0498-4.79,14.3999-5.79,28.23-15.06,31.8999-17.61l-6.21972,59.79-2.52,24.24a4.51415,4.51415,0,0,0,4.48,4.97h15.52978a4.50547,4.50547,0,0,0,4.35987-3.36l25.64013-97.65a19.032,19.032,0,0,0-19.71-23.83l-53.25976,3.65,3.71972-14.88-47.54-3.16-.13965.1c-1.14013.83-2.25,1.7-3.31005,2.61a40.27149,40.27149,0,0,0-6.99024,7.66A38.48741,38.48741,0,0,0,827.34138,497.97109Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#2f2e41" />
-                    <path
-                        d="M827.34138,497.97109a39.41035,39.41035,0,0,0,36.8999,26.81006,196.14623,196.14623,0,0,0,22.56982-13.39l-.8999,8.61-7.83984,75.42a4.51415,4.51415,0,0,0,4.48,4.97h15.52978a4.50547,4.50547,0,0,0,4.35987-3.36l9.15039-34.85,16.48974-62.8a19.032,19.032,0,0,0-19.71-23.83l-53.25976,3.65,3.71972-14.88-26.98-1.79A38.48741,38.48741,0,0,0,827.34138,497.97109Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#2f2e41" />
-                    <path
-                        d="M838.7735,458.32082l-.35766-.043-8.29517-40.78515c-.071-.354-6.85229-35.5332,13.93677-53.92432l.36182-2.51709a4.50032,4.50032,0,0,1,5.78711-3.65771l19.58471,6.0747a4.49086,4.49086,0,0,1,3.019,5.4419l-1.90381,7.2417c2.63989,3.1001,33.7146,40.51221,22.89038,69.33545L888.9488,464.439Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#198754" />
-                    <path
-                        d="M920.09389,426.48986a10.52591,10.52591,0,0,0-1.32908.99037l-47.89739-12.858-3.13136-11.634-18.17538,2.43095,3.54192,21.13437a8,8,0,0,0,6.95146,6.62248l56.032,6.619a10.4971,10.4971,0,1,0,4.00785-13.30516Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#ffb8b8" />
-                    <path
-                        d="M869.022,414.43646,846.48068,417.34a4.5,4.5,0,0,1-5.07405-4.54822l.42987-22.65461a12.49741,12.49741,0,0,1,24.79917-3.12052l6.14215,21.73423a4.5,4.5,0,0,1-3.75583,5.68559Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#198754" />
-                    <circle cx="753.92061" cy="258.80372" r="24.56103" fill="#ffb8b8" />
-                    <path
-                        d="M861.3848,329.34791l-3.075-5.59966c-5.82461,23.73215,4.46383,43.37315,4.46383,43.37315l-39.93243-18.601.38033-6.59991-3.95134,4.484-5.67747-3.12872-.74992-4.28064-4.28563,1.06158,15.64354-28.38736c15.18238-27.01314,37.25508-16.69982,37.25508-16.69982,35.11544-1.66934,30.82681,32.97543,30.82681,32.97543Z"
-                        transform="translate(-108.75634 -68.49293)" fill="#2f2e41" />
-                    <ellipse cx="556.1612" cy="472.39114" rx="12.17949" ry="47.5"
-                        transform="translate(-275.75171 306.36236) rotate(-32.66242)" fill="#3f3d56" />
-                </svg><h3 class="col-12 mb-5">Keranjang Belanja Anda Kosong</h3></div>`;
+          ul_list_produk.innerHTML = `<li class="list-group-item d-flex justify-content-center align-items-center"><h3>Keranjang Belanja Anda Kosong</h3></li>`;
           keteranganharga.classList.add("d-none");
         } else {
           keteranganharga.classList.remove("d-none");
           var template_list = ``;
           tmp_list_belanja.forEach((item, index) => {
-            template_list += `<li class="list-group-item d-flex justify-content-between align-items-center bg-glass text-light py-2 px-3 rounded-2 border-cus">
+            template_list += `<li class="list-group-item d-flex justify-content-between align-items-center">
                             <img src="${item.foto}" height="40" width="40">
                             <div class="ms-2 me-auto">
                                 <div class="fw-bold">${item.nama}</div>
@@ -454,7 +431,7 @@
                             <div class="fw-bold mx-3">${titikPemisahRupiah(
                               item.hargaint * item.qty
                             )}</div>
-                            <button onclick="hapusProduk(${index})" class="btn btn-outline-light btn-sm">Hapus</span>
+                            <button onclick="hapusProduk(${index})" class="btn btn-danger btn-sm">Hapus</span>
                         </li>`;
           });
           ul_list_produk.innerHTML = template_list;
@@ -503,13 +480,16 @@
         }
         updateTampilan();
       }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script type="text/javascript">
       var myLink = document.querySelector('a[href="#"]');
       myLink.addEventListener("click", function (e) {
         e.preventDefault();
       });
     </script>
-
-  <script src="js/script.js"></script>
   </body>
 </html>
