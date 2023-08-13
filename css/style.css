@@ -14,6 +14,12 @@
    backdrop-filter: blur(5px) !important; 
 }
 
+.c-glass {
+   background: linear-gradient(to left, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)) !important;
+   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.75) !important;
+   backdrop-filter: blur(5px) !important; 
+}
+
 .glass {
    background: linear-gradient(to left, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)) !important;
    backdrop-filter: blur(5px) !important;
@@ -75,7 +81,7 @@ option {
 }
 
 .form-control::placeholder {
-   color: white;
+   color: white !important;
 }
 
 .kopi {
@@ -154,8 +160,12 @@ option {
    border: 0;
 }
 
-.kiri h1, .best-seller h1, .about-us h1, .our-team h1, .review h1 {
+.kiri h1, .best-seller h1, .about-us h1, .our-team h1, .review h1, .list2 h1, .keranjang h1, .keranjang .metod, .keranjang .metod1 {
    font-family: 'Yellowtail', cursive;
+}
+
+.found {
+   width: 30%;
 }
 
 /* animasi */
@@ -214,14 +224,12 @@ header.active1 .kanan {
    transition: 1s;
    transform: scale(0.9);
    transition-delay: 0.3s;
-   filter: blur(5px);
 }
 
 .best-seller.animate .list-produk, .our-team.animate .list-team {
    opacity: 1;
    transition: 1.5s;
    transition-delay: 0.1s;
-   filter: blur(0);
    transform: scale(1);
 }
 
@@ -272,6 +280,7 @@ header.active1 .kanan {
 .review .r1, .review .r3 {
    transform: translateY(50%);
    transition: 1.5s;
+   backdrop-filter: blur(5px);
    filter: blur(5px);
    opacity: 0;
 }
@@ -279,6 +288,7 @@ header.active1 .kanan {
 .review.animate .r1, .review.animate .r3 {
    transform: translateY(0);
    transition: 2s;
+   backdrop-filter: blur(5px);
    filter: blur(0);
    opacity: 1;
 }
@@ -286,6 +296,7 @@ header.active1 .kanan {
 .review .r2 {
    transform: translateY(-50%);
    transition: 1.5s;
+   backdrop-filter: blur(5px);
    filter: blur(5px);
    opacity: 0;
 }
@@ -293,6 +304,7 @@ header.active1 .kanan {
 .review.animate .r2 {
    transform: translateY(0);
    transition: 2s;
+   backdrop-filter: blur(5px);
    filter: blur(0);
    opacity: 1;
 }
@@ -351,6 +363,118 @@ header.active1 .kanan {
    transition: 2s;
    filter: blur(0);
    opacity: 1;
+}
+
+.list2 h1, .list2 p, .list2 hr {
+   transform: translateY(-30%);
+   transition: 1s;
+   filter: blur(5px);
+   opacity: 0;
+}
+
+.list2.active2 h1, .list2.active2 p, .list2.active2 hr {
+   transform: translateY(0);
+   transition: 1s;
+   filter: blur(0);
+   opacity: 1;
+}
+
+.list2 .utility .btn, .list2 .utility .form-control, .list2 .utility .form-floating {
+   transform: translateY(30%);
+   transition: 1s;
+   backdrop-filter: blur(5px);
+   filter: blur(5px);
+   opacity: 0;
+}
+
+.list2.active2 .utility .btn, .list2.active2 .utility .form-control, .list2.active2 .utility .form-floating {
+   transform: translateY(0);
+   transition: 1s;
+   backdrop-filter: blur(5px);
+   filter: blur(0);
+   opacity: 1;
+}
+
+.keranjang h1 {
+   transform: translateY(-40%);
+   transition: 1s;
+   filter: blur(5px);
+   opacity: 0; 
+}
+
+.keranjang.active3 h1 {
+   transform: translateY(0);
+   transition: 1s;
+   filter: blur(0);
+   opacity: 1; 
+}
+
+.keranjang .tampilan {
+   transform: translateY(-40%);
+   transition: 1s;
+   backdrop-filter: blur(5px);
+   filter: blur(5px);
+   opacity: 0; 
+}
+
+.keranjang.active3 .tampilan {
+   transform: translateY(0);
+   transition: 1s;
+   backdrop-filter: blur(5px);
+   filter: blur(0);
+   opacity: 1; 
+}
+
+.keranjang .metod {
+   transform: translateX(-40%);
+   transition: 1s;
+   filter: blur(5px);
+   opacity: 0; 
+}
+
+.keranjang.active3 .metod {
+   transform: translateX(-0);
+   transition: 1s;
+   filter: blur(0);
+   opacity: 1; 
+}
+
+.keranjang .metod1 {
+   transform: translateX(40%);
+   transition: 1s;
+   filter: blur(5px);
+   opacity: 0; 
+}
+
+.keranjang.active3 .metod1 {
+   transform: translateX(-0);
+   transition: 1s;
+   filter: blur(0);
+   opacity: 1; 
+}
+
+.keranjang .order {
+   transform: translateX(-40%);
+   transition: 1s;
+   opacity: 0; 
+}
+
+.keranjang.active3 .order {
+   transform: translateX(-0);
+   transition: 1s;
+   opacity: 1; 
+}
+
+.keranjang .pay {
+   transform: translateX(40%);
+   transition: 1s;
+   opacity: 0; 
+}
+
+.keranjang.active3 .pay {
+   transform: translateX(-0);
+   transition: 1s;
+   opacity: 1; 
 }
 
 /* Custom Scroll Bar */

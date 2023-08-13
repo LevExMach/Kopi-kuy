@@ -13,75 +13,19 @@
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Yellowtail&display=swap"
+        rel="stylesheet">
     <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.6.3.min.js"></script>
     <style>
         /* tulis kode CSS internal di bawah sini */
-        :root {
-            --bs-body-font-family: 'Poppins', sans-serif;
-        }
 
-        body {
-            background-image: url(images/background/bgkopi.png);
-            background-size: 20%;
-        }
-
-        .bg-glass,
-        .form-control:focus {
-            background: linear-gradient(to left, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.75);
-            backdrop-filter: blur(5px);
-        }
-
-        .border-bot {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        }
-
-        .border-top {
-            border-top: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .border-cus {
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-top: 1px solid rgba(255, 255, 255, 0.5);
-            border-left: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        option {
-            background-color: rgb(49, 49, 49);
-        }
-
-        .card-cus {
-            opacity: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to left, rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.700));
-            backdrop-filter: blur(25px);
-            transform: translateY(50px);
-            transition: 0.5s;
-        }
-
-        .card-cus:hover {
-            opacity: 1;
-            transform: translateY(0);
-            transition: 0.5s;
-        }
-
-        .trans {
-            overflow: hidden;
-
-        }
-
-        .form-control::placeholder {
-            color: white;
-        }
 
         /* Batas Akhir penulisan kode CSS internal */
     </style>
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark bg">
     <!-- Tulis Kode Bootstrap Di Bawah Sini -->
 
     <nav class="navbar navbar-dark bg-glass navbar-expand-lg bisadicopy border-bot sticky-top">
@@ -122,15 +66,15 @@
         </div>
     </nav>
 
-    <section class="riki-block produk text-center my-5 py-5">
+    <section class="riki-block produk list2 text-center my-5 py-5">
         <div class="container">
             <h1 class="text-light">Pilih Produk Anda</h1>
-            <p class="fs-4 text-light">Kualitas terbaik biji kopi pilihan, fresh langsung dari petani</p>
+            <p class="text-light">Kualitas terbaik biji kopi pilihan, fresh langsung dari petani</p>
             <hr class="border border-light border-1 opacity-75">
 
             <!-- Ini Untuk Select -->
 
-            <div class="row gap-2 gap-md-0">
+            <div class="row gap-2 gap-md-0 utility">
                 <div class="col-md-4">
                     <div class="input-group input-group-lg h-100">
                         <button aria-readonly="true" disabled class="btn bg-glass btn-outline-light" type="button"

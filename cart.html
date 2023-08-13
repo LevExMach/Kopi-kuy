@@ -20,56 +20,18 @@
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css" />
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-      .card-header {
-        padding: 0.5rem 1rem;
-        margin-bottom: 0;
-        background-color: rgba(0, 0, 0, 0.03);
-        border-bottom: none;
-      }
-      .btn-light:focus {
-        color: #212529;
-        background-color: #e2e6ea;
-        border-color: #dae0e5;
-        box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
-      }
-      .form-control {
-        height: 50px;
-        border: 2px solid #eee;
-        border-radius: 6px;
-        font-size: 14px;
-      }
-      .form-control:focus {
-        color: #495057;
-        background-color: #fff;
-        border-color: #039be5;
-        outline: 0;
-        box-shadow: none;
-      }
-      .bg-nav {
-        background-color: #73483f;
-      }
-      .bg-cok {
-        background-color: #f4ede5;
-      }
-      div.nomorakun {
-        /* color mengatur warna tulisan */
-        text-align: left;
-        margin-top: 4px;
-        margin-left: 50px;
-        margin-bottom: 21px;
-      }
-      .oder {
-        font-size: 12px;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Yellowtail&display=swap"
+        rel="stylesheet">
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
   </head>
 
   <body class="bg-dark bg">
     <!--  -->
     <nav class="navbar navbar-dark bg-glass navbar-expand-lg bisadicopy border-bot sticky-top mw-100 load">
       <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
               <img src="images/logo/logo_kuy.png" height="40" alt="image">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav11"
@@ -101,9 +63,9 @@
 
     <section class="keranjang text-light">
       <div class="container my-4">
-        <h1 class="text-center mb-3">Keranjang Belanja</h1>
+        <h1 class="text-center mb-3 py-3">Keranjang Belanja</h1>
         <!-- tampilan -->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center tampilan">
           <div class="row" id="ul_list_produk"></div>
         </div>
         <!-- orderan -->
@@ -112,14 +74,14 @@
             <div class="container d-flex justify-content-center mt-5 mb-5">
               <div class="row g-3">
                 <div class="col-md-6">
-                  <h4>Metode Pembayaran</h4>
-                  <div class="card bg-glass border-cus">
+                  <h4 class="metod">Metode Pembayaran</h4>
+                  <div class="card bg-glass border-cus order">
                     <div
                       class="d-flex align-items-center justify-content-between mx-5 my-3">
                       <span class="oder">Id Order:</span>
                       <span class="oder">518d-abjk-fd79-67bj-fyvjh6</span>
                     </div>
-                    <div class="nomorakun">
+                    <div class="nomorakun ps-5 mb-4 text-left">
                       <h4>Nomor Akun</h4>
                       <h7>081277788888</h7>
                     </div>
@@ -305,8 +267,8 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <h4>Ringkasan Order</h4>
-                  <div class="card bg-glass border-cus">
+                  <h4 class="metod1">Ringkasan Order</h4>
+                  <div class="card bg-glass border-cus pay">
                     <!-- bas -->
                     <!-- <div class="d-flex align-items-center m-3">
                     <div>
@@ -397,8 +359,8 @@
 
       function updateTampilan() {
         if (tmp_list_belanja.length < 1) {
-          ul_list_produk.innerHTML = `<div class="row mt-4 d-flex justify-content-center align-items-center bg-glass text-center border-cus">
-                <svg class="w-50 col-12 my-5 h-auto pt-5" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="982.48732"
+          ul_list_produk.innerHTML = `<div class="row px-3 mt-4 d-flex justify-content-center align-items-center bg-glass text-center border-cus rounded-4 found">
+                <svg class="found col-12 my-5 h-auto pt-5" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="982.48732"
                     height="763.01413" viewBox="0 0 982.48732 763.01413" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <circle cx="559.4329" cy="333.06116" r="40.02979" fill="#e6e6e6" />
                     <path
@@ -489,7 +451,7 @@
           keteranganharga.classList.remove("d-none");
           var template_list = ``;
           tmp_list_belanja.forEach((item, index) => {
-            template_list += `<li class="list-group-item d-flex justify-content-between align-items-center bg-glass text-light">
+            template_list += `<li class="list-group-item d-flex justify-content-between align-items-center bg-glass text-light py-2 px-3 rounded-2 border-cus">
                             <img src="${item.foto}" height="40" width="40">
                             <div class="ms-2 me-auto">
                                 <div class="fw-bold">${item.nama}</div>

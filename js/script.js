@@ -26,3 +26,12 @@ window.addEventListener('load', function () {
 })
 let trans = document.querySelector('header')
 
+window.addEventListener('load', function () {
+    transis.classList.add('active2')
+})
+let transis = document.querySelector('.list2')
+
+window.addEventListener('load', function () {
+    transist.classList.add('active3')
+})
+let transist = document.querySelector('.keranjang')
